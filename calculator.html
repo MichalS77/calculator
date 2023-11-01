@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" src="calculator.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="calculator.css">
+    </head>
     <div id="calculator">
-        <div><h1 id="display"> </h1></div>
+        <div id="divDisplay"><h1 id="display"> </h1></div>
+        <div id="buttons">
         <div id="row1">
             <button id="btn7" class="btnValue" value=7>7</button>
             <button id="btn8" class="btnValue" value=8>8</button>
@@ -31,8 +33,8 @@
         <button id="btnSubtract" class="btnOperation" Value="-">-</button>
         <button id="btnEqual">=</button>
         </div>
+        </div>
     </div>
-</head>
 <body>
 <script src="calculator.js"></script>    
 </body>

@@ -9,12 +9,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     let btnOperation = document.querySelectorAll('.btnOperation');
     let display = document.getElementById('display');
     
-console.log(btnValue);
-
     btnValue.forEach(button => {        
         button.addEventListener('click', () => {
-            console.log("button clicked");
-            console.log(button.value)
             display.innerText += button.value;
         })
     });
@@ -32,10 +28,13 @@ console.log(btnValue);
         operator = button.value;
         })
     });
-});
 
-let multiply = (num1, num2) => {return num1 * num2};
-let divide = (num1, num2) => {return num1 / num2};
+    btnClear.addEventListener('click', () =>{
+        num1 = '';
+        num2 = '';
+        display.innerText = '';
+    })
+});
 
 let operate = (num1, num2, operator) => {
     num2 = parseInt(display.innerText);
@@ -45,9 +44,9 @@ let operate = (num1, num2, operator) => {
     }else if (operator === '-'){
       return parseInt(num1) - parseInt(num2);
     }else if (operator === '/'){
-        return num1 / num2;
+        return parseInt(num1) / num2;
     }else if(operator === '*'){
-        return multiply(num1, num2);
+        return parseInt(num1) * num2;
     }
 }
 
